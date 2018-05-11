@@ -54,7 +54,12 @@ Create a new database user "wherehows" with the password set as "wherehows". Gra
     GRANT SELECT ON wherehows.* TO 'wherehows_ro'@'localhost';
     GRANT SELECT ON wherehows.* TO 'wherehows_ro'@'%';
 
-Run [this sql script](https://github.com/linkedin/WhereHows/blob/master/wherehows-data-model/DDL/create_all_tables_wrapper.sql) to create the required database tables.
+Run [this sql script](https://github.com/linkedin/WhereHows/blob/master/wherehows-data-model/DDL/create_all_tables_wrapper.sql) with command 
+```
+cd WhereHows/wherehows-data-model/DDL
+mysql -hlocalhost -uwherehows -pwherehows -Dwherehows < create_all_tables_wrapper.sql
+```
+to create the required database tables.
 
 
 ## Elasticsearch Setup
